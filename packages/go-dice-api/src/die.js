@@ -48,6 +48,10 @@ export default class Die extends EventEmitter {
     this.emit("accRaw", xyzAccRaw);
   }
 
+  reconnect() {
+    this.instance.attemptReconnect();
+  }
+
   getBatteryLevel() {
     return new Promise((resolve) => {
       const onBatteryLevel = (level) => {

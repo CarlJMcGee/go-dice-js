@@ -1,5 +1,5 @@
 import EventEmitter from "./event-emitter";
-import { LedColorType } from './led-color';
+import { LedColorType } from "./led-color";
 
 export enum Color {
   0 = "Black",
@@ -53,7 +53,9 @@ export default class Die extends EventEmitter {
   ): void;
   on(event: "batteryLevel", handler: (level: number) => void): void;
   on(event: "color", handler: (colourId: number) => void): void;
-  on(event: "disconnected", handler: () => void): void;
+  on(event: "disconnected", handler: (dieInstance: ) => void): void;
+
+  reconnect(): void;
 
   getBatteryLevel(): Promise<number>;
 
