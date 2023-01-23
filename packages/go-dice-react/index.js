@@ -97,7 +97,7 @@ export function useBatteryLevel(die, interval = 1000) {
   return level;
 }
 
-export function useConnStat(die) {
+export function useConnectionStatus(die) {
   const [connected, setConnection] = useState(true);
 
   useEffect(() => {

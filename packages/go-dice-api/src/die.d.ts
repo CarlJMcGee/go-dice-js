@@ -57,6 +57,8 @@ export default class Die extends EventEmitter {
   on(event: "color", handler: (colourId: number) => void): void;
   on(event: "disconnected", handler: () => void): void;
 
+  disconnect(): void;
+
   reconnect(): Promise<void>;
 
   getBatteryLevel(): Promise<number>;

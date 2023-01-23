@@ -51,6 +51,10 @@ export default class Die extends EventEmitter {
     this.emit("accRaw", xyzAccRaw);
   }
 
+  disconnect() {
+    this.instance.bluetoothDevice.gatt.disconnect();
+  }
+
   onDisconnect() {
     this.connected = false;
   }

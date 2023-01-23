@@ -16,4 +16,4 @@ export function useAccRaw(die: Die): [X: number, Y: number, Z: number];
 
 export function useBatteryLevel(die: Die): number;
 
-export function useConnStat(die: Die): boolean;
+export function useConnectionStatus(die: Die): boolean;
